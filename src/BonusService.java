@@ -1,17 +1,20 @@
 public class BonusService {
-    public int calculate(boolean depositing, int deposit ) {
-        int balance = 1000;
+    public int calculate( int deposit  ) {
+    int balance = 100;
 
-       int min = 1000;
-       int sum = balance + deposit;
-       int bonus = deposit / 100;
-       int percent = depositing ? bonus : sum;
-       int check = percent + sum;
-       if (sum > min) {
-       } else {
-            check = sum;
-      }
 
-return bonus;
+    int percent;
+        if (deposit >= 1000) {
+        percent = 1;
+    } else {
+        percent = 0;
+
+    }
+    int bonus = deposit / 100 * percent;
+
+
+
+
+        return bonus;
     }
 }
